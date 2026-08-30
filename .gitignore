@@ -14,6 +14,7 @@ docs/*
 !docs/PKUcourse/**
 !docs/LSGI2801.pdf
 !docs/LSGI2801_Assignment.pdf
+docs/**/.DS_Store
 code.py
 cv.pdf
 me.JPG

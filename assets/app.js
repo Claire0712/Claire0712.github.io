@@ -101,7 +101,7 @@ export const academicWorksMarkup = (works, locale) => {
       ${authors ? `<p class="work-card__authors">${authors}</p>` : ''}
       ${work.note ? `<p class="work-card__note"><span>${escapeHtml(textFor(work.note, locale))}</span>${work.noteLogo ? `<img class="work-card__note-logo" src="${escapeHtml(work.noteLogo)}" alt="" aria-hidden="true">` : ''}</p>` : ''}
       <details><summary>${normalizeLocale(locale) === 'zh' ? '查看摘要' : 'Read abstract'}</summary><p>${escapeHtml(textFor(work.abstract, locale))}</p></details>
-      <a class="work-card__pdf" href="${escapeHtml(work.pdf)}" target="_blank" rel="noreferrer">${normalizeLocale(locale) === 'zh' ? '查看 PDF' : 'View PDF'} <span aria-hidden="true">↗</span></a>
+      ${work.pdf ? `<a class="work-card__pdf" href="${escapeHtml(work.pdf)}" target="_blank" rel="noreferrer">${normalizeLocale(locale) === 'zh' ? '查看 PDF' : 'View PDF'} <span aria-hidden="true">↗</span></a>` : ''}
       ${work.code ? `<a class="work-card__code" href="${escapeHtml(work.code)}" target="_blank" rel="noreferrer">${normalizeLocale(locale) === 'zh' ? '查看代码' : 'View code'} <span aria-hidden="true">↗</span></a>` : ''}
     </div>
   </article>`;

@@ -82,12 +82,11 @@ export const academicWorks = [
     ],
     abstract: { zh: '提出一个用于热偏好支持的多模态智能体评测基准。该基准基于 14 名参与者的 3,843 条可穿戴设备、环境、行为与历史观测，设置部分可观测的工具调用环境，并从偏好一致性、证据充分性、行动安全性、工具预算和范围约束等维度进行评估。', en: 'This work introduces an auditable benchmark for thermal-preference support from wearable, environmental, behavioural, and historical evidence. Using 3,843 observations from 14 adults, it evaluates partially observed, tool-mediated trajectories for preference agreement, evidence sufficiency, action safety, tool budget, and scope control.' },
     preview: './assets/media/mmm-figure.png',
-    previews: ['./assets/media/mmm-figure.png', './assets/media/mmm-qapcf.png'],
-    pdf: './MMM2027/MMM2027.pdf'
+    previews: ['./assets/media/mmm-figure.png', './assets/media/mmm-qapcf.png']
   },
   {
     category: 'coursePaper',
-    title: { zh: '当高温遇上卫生系统能力：中国门诊利用的可复现生态学研究', en: 'When Heat Meets Health-System Capacity: A Reproducible Ecological Study of Outpatient Utilization Across China' },
+    title: { zh: '高温与卫生系统能力：中国医患关系的可复现生态学研究', en: 'When Heat Meets Health-System Capacity: A Reproducible Ecological Study of Outpatient Utilization Across China' },
     note: { zh: '北大课程论文', en: 'PKU Course Paper' },
     noteLogo: './assets/media/pku-logo.svg',
     abstract: { zh: '使用 2014、2016 与 2018 年中国 31 个省级单元的公开数据，考察暖季 Humidex 与人均门诊量之间的关联是否因滞后医疗服务能力而异。研究整合人口加权 ERA5、WorldPop 与官方卫生统计，结果未发现能力修饰效应的精确证据；结论限定为省级生态关联，而非个体短期效应或资源配置的因果效应。', en: 'Using publicly auditable data for 31 Chinese provincial units in 2014, 2016, and 2018, this reproducible ecological study tests whether the warm-season Humidex–outpatient association differs by lagged health-care capacity. It combines population-weighted ERA5, WorldPop, and official health statistics; the results provide no precise evidence of capacity effect modification and are limited to province-year ecological associations.' },

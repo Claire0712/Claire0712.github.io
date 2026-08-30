@@ -136,10 +136,11 @@ test('academic works render image cards with expandable abstracts and PDFs', () 
   assert.match(html, /MMM2027 Under Submission/);
   assert.match(html, /PKU Course Paper/);
   assert.match(chineseHtml, /MMM2027 在投/);
+  assert.match(chineseHtml, /高温与卫生系统能力：中国医患关系的可复现生态学研究/);
   assert.match(html, /Zhang, Shizhuo<sup>\*<\/sup>; Liu, Wentao<sup>\*<\/sup>; Fang, Kun; Chen, Yutong/);
   assert.match(html, /work-card__note-logo/);
   assert.match(html, /pku-logo\.svg/);
-  assert.match(html, /MMM2027\/MMM2027\.pdf/);
+  assert.doesNotMatch(html, /MMM2027\/MMM2027\.pdf/);
   assert.match(html, /PKUcourse\/main_副本\.pdf/);
   assert.match(html, /LSGI2801\.pdf/);
   assert.match(html, /LSGI2801_Assignment\.pdf/);
