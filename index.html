@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A bilingual personal resume and research homepage.">
+    <title>Shizhuo Zhang | Personal homepage</title>
+    <link rel="stylesheet" href="./assets/styles.css?v=20260830-30">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="site-name" href="#top" aria-label="Back to top" data-profile="name">Shizhuo Zhang</a>
+        <div class="header-actions">
+          <div class="language-switch" aria-label="Language switcher">
+            <button type="button" data-locale="zh" aria-pressed="false">中</button><span aria-hidden="true">/</span><button type="button" data-locale="en" aria-pressed="true">EN</button>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Open navigation</span><span aria-hidden="true">Menu</span></button>
+        </div>
+        <nav class="site-nav" id="site-nav" aria-label="Primary" data-open="false">
+          <a href="#about" data-key="navAbout">About</a><a href="#education" data-key="navEducation">Education</a><a href="#research" data-key="navResearch">Research</a><a href="#projects" data-key="navProjects">Work</a><a href="#awards" data-key="navAwards">Awards</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="academic-layout container" id="main-content" tabindex="-1">
+      <aside class="profile-column" aria-label="Profile">
+        <div class="profile-card">
+          <img class="profile-photo" src="./assets/media/profile-photo.jpg" alt="Portrait of Shizhuo Zhang">
+          <h1 data-profile="name">Shizhuo Zhang</h1>
+          <p class="profile-title" data-profile="title">Undergraduate student at<br>The Hong Kong Polytechnic University</p>
+          <p class="profile-location" data-profile="location">Hong Kong SAR</p>
+          <div class="profile-contacts">
+            <a class="profile-contact" data-email aria-label="Email" href="mailto:clairez.zhang@connect.polyu.hk"><svg class="profile-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2.3 2L12 12.1 18.7 7H5.3ZM19 17V8.2l-7 5.3-7-5.3V17h14Z"/></svg><span>clairez.zhang@connect.polyu.hk</span></a>
+            <a class="profile-contact" data-github aria-label="GitHub" href="https://github.com/Claire0712" target="_blank" rel="noreferrer"><svg class="profile-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.3 11.3 0 0 0 8.4 22.7c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.6-1.3-5.6-6a4.7 4.7 0 0 1 1.2-3.2c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.9 5.7-5.6 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg><span>GitHub / Repositories</span></a>
+          </div>
+        </div>
+      </aside>
+
+      <div class="content-column">
+        <section class="content-card" id="about" aria-labelledby="about-heading"><h2 id="about-heading" data-key="about">About</h2><div class="about-copy"><p data-profile="about"></p><div class="research-keywords" data-keywords aria-label="Research interests"></div></div></section>
+        <section class="content-card" id="education" aria-labelledby="education-heading"><h2 id="education-heading" data-key="education">Education</h2><div class="entries" data-entries="education"></div></section>
+        <section class="content-card" id="research" aria-labelledby="research-heading"><h2 id="research-heading" data-key="research">Research experience</h2><div class="entries" data-entries="research"></div></section>
+        <section class="content-card" id="projects" aria-labelledby="projects-heading"><h2 id="projects-heading" data-key="projects">Projects &amp; academic work</h2><div class="entries" data-entries="projects"></div><div class="work-cards" data-work-cards="academicWorks"></div></section>
+        <section class="content-card" id="awards" aria-labelledby="awards-heading"><h2 id="awards-heading" data-key="awards">Awards &amp; honors</h2><div class="entries" data-entries="awards"></div></section>
+      </div>
+    </main>
+
+    <footer class="site-footer container"><span data-profile="name">Shizhuo Zhang</span><a href="#top" data-key="backToTop" data-back-to-top>Back to top ↑</a></footer>
+    <script type="module" src="./assets/app.js?v=20260830-30"></script>
+  </body>
+</html>

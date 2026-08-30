@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+tmp/
+.superpowers/
+docs/
+code.py
+cv.pdf
+me.JPG
+sample.jpg
+image.png
+hk_ev_spatial_distribution.html.pdf
+sg_ev_spatial_distribution_real.html.pdf
