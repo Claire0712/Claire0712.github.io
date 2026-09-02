@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { academicWorksMarkup, normalizeLocale, nextLocale, textFor, timelineMarkup } from '../assets/app.js';
-import { academicWorks, profile, research, projects, education, awards } from '../assets/data.js';
+import { academicWorksMarkup, currentUpdatesMarkup, normalizeLocale, nextLocale, textFor, timelineMarkup } from '../assets/app.js';
+import { academicWorks, currentUpdates, profile, research, projects, education, awards } from '../assets/data.js';
 
 test('normalizes only supported locales', () => {
   assert.equal(normalizeLocale('en'), 'en');
@@ -30,6 +30,25 @@ test('sample records supply both language variants', () => {
 test('profile supplies localized research-interest keywords', () => {
   assert.deepEqual(profile.keywords.en, ['Urban Systems', 'Sustainable Energy', 'Data-Driven Decision-Making', 'Remote Sensing', 'Knowledge Graphs', 'Intelligent Agents']);
   assert.equal(profile.keywords.zh.length, 6);
+});
+
+test('right sidebar current-updates card keeps only the Nature Communications co-author update', async () => {
+  const html = await readFile(fileURLToPath(new URL('../index.html', import.meta.url)), 'utf8');
+  const english = currentUpdatesMarkup(currentUpdates, 'en');
+  const chinese = currentUpdatesMarkup(currentUpdates, 'zh');
+  assert.match(html, /class="current-updates-card"/);
+  assert.match(html, /data-current-updates/);
+  assert.equal(currentUpdates.length, 1);
+  assert.match(english, /Nature Communications/);
+  assert.match(english, /Co-author/);
+  assert.doesNotMatch(english, /Co-first author/);
+  assert.match(english, /Supported by Peking University Shenzhen/);
+  assert.match(english, /Target submission: September/);
+  assert.match(chinese, /共同作者/);
+  assert.match(chinese, /北京大学深圳研究支持/);
+  assert.doesNotMatch(`${english}\n${chinese}`, /COLING 2027|WWW 2027/);
+  assert.match(chinese, /Nature Communications/);
+  assert.match(chinese, /预计 9 月投稿/);
 });
 
 test('about section renders a dedicated keyword container instead of the intro paragraph', async () => {

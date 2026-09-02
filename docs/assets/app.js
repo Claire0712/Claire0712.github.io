@@ -1,4 +1,4 @@
-import { academicWorks, awards, education, profile, projects, research } from './data.js';
+import { academicWorks, awards, currentUpdates, education, profile, projects, research } from './data.js';
 
 export const normalizeLocale = (value) => value?.startsWith('en') ? 'en' : 'zh';
 
@@ -114,15 +114,22 @@ export const academicWorksMarkup = (works, locale) => {
   }).join('');
 };
 
+export const currentUpdatesMarkup = (updates, locale) => updates.map((update) => `
+  <article class="current-update">
+    <h3>${escapeHtml(textFor(update.title, locale))}</h3>
+    <p class="current-update__status"><span aria-hidden="true"></span>${escapeHtml(textFor(update.status, locale))}</p>
+    ${update.detail ? `<p class="current-update__detail">${escapeHtml(textFor(update.detail, locale))}</p>` : ''}
+  </article>`).join('');
+
 const copy = {
   zh: {
     navAbout: '关于', navResearch: '研究', navProjects: '成果', navEducation: '教育', navAwards: '荣誉', navContact: '联系',
-    about: '个人简介', research: '研究经历', projects: 'Project', education: '教育背景', awards: '获奖经历', contact: '联系方式',
+    about: '个人简介', research: '研究经历', projects: 'Project', education: '教育背景', awards: '获奖经历', contact: '联系方式', currentUpdates: '近况',
     contactCopy: '欢迎来信交流研究与合作。', backToTop: '回到顶部 ↑', menuOpen: '打开导航', menuClose: '关闭导航'
   },
   en: {
     navAbout: 'About', navResearch: 'Research', navProjects: 'Work', navEducation: 'Education', navAwards: 'Awards', navContact: 'Contact',
-    about: 'About me', research: 'Research experience', projects: 'Project', education: 'Education', awards: 'Awards & honors', contact: 'Contact',
+    about: 'About me', research: 'Research experience', projects: 'Project', education: 'Education', awards: 'Awards & honors', contact: 'Contact', currentUpdates: 'Current updates',
     contactCopy: 'I welcome conversations about research, collaboration, and exchange.', backToTop: 'Back to top ↑', menuOpen: 'Open navigation', menuClose: 'Close navigation'
   }
 };
@@ -198,6 +205,7 @@ export const render = (locale) => {
   });
   document.querySelectorAll('[data-entries]').forEach((element) => { element.innerHTML = timelineMarkup(records[element.dataset.entries], language); });
   document.querySelectorAll('[data-work-cards]').forEach((element) => { element.innerHTML = academicWorksMarkup(academicWorks, language); });
+  document.querySelectorAll('[data-current-updates]').forEach((element) => { element.innerHTML = currentUpdatesMarkup(currentUpdates, language); });
   initializeCarousels();
 
   const email = profile.email;

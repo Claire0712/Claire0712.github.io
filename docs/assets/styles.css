@@ -144,8 +144,16 @@ body { background: var(--page-tint); color: var(--ink); font-family: Lato, Inter
 .site-nav { font-size: .88rem; gap: 1.2rem; }
 .academic-layout { display: grid; grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr); gap: 1.1rem; padding-top: 4.75rem; padding-bottom: 1.25rem; align-items: start; }
 .profile-column { position: sticky; top: 5.1rem; }
-.profile-card, .content-card { background: #fff; border: 1px solid var(--lavender-light); border-radius: .55rem; box-shadow: 0 .18rem .75rem rgba(94,90,134,.11); }
+.profile-card, .current-updates-card, .content-card { background: #fff; border: 1px solid var(--lavender-light); border-radius: .55rem; box-shadow: 0 .18rem .75rem rgba(94,90,134,.11); }
 .profile-card { padding: 1.1rem; text-align: center; }
+.current-updates-card { padding: 1.1rem; margin-top: .85rem; }
+.current-updates-card h2 { margin: 0 0 .75rem; color: var(--deep-violet); font-size: 1rem; font-weight: 700; }
+.current-update { padding: .75rem 0; border-top: 1px solid var(--lavender-light); }
+.current-update h3 { margin: 0 0 .3rem; font-size: .82rem; line-height: 1.35; }
+.current-update__status, .current-update__detail { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+.current-update__status { display: flex; align-items: center; gap: .4rem; font-weight: 700; }
+.current-update__status span { width: .45rem; height: .45rem; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 .18rem #e9f6f3; }
+.current-update__detail { margin-top: .18rem; padding-left: .85rem; }
 .profile-photo { display: block; aspect-ratio: 1 / 1; width: min(100%, 11rem); margin: 0 auto .9rem; border-radius: .25rem; object-fit: cover; object-position: center; }
 .profile-card h1 { margin: 0 0 .5rem; font-family: Lato, Inter, sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: 0; line-height: 1.2; white-space: normal; }
 .profile-title, .profile-location { margin: 0 0 .35rem; color: #666; font-size: .88rem; }
@@ -212,7 +220,7 @@ body { background: var(--page-tint); color: var(--ink); font-family: Lato, Inter
 .site-name, .site-nav a:hover, .site-nav a:focus-visible, .language-switch button[aria-pressed="true"], .work-card__pdf, .work-card__code { color: var(--deep-violet); }
 .profile-contact:hover, .github-link:hover, .work-card__pdf:hover, .work-card__code:hover { color: var(--teal); }
 .content-card { border-color: var(--lavender-light); }
-.content-card:hover, .profile-card:hover { box-shadow: 0 .28rem 1rem rgba(94,90,134,.15); }
+.content-card:hover, .profile-card:hover, .current-updates-card:hover { box-shadow: 0 .28rem 1rem rgba(94,90,134,.15); }
 .work-card { border-color: var(--lavender-light); border-radius: .55rem; box-shadow: 0 .2rem .8rem rgba(94,90,134,.08); }
 .work-card__image, .work-carousel { border-bottom-color: var(--lavender-light); }
 
@@ -236,6 +244,7 @@ body { background: var(--page-tint); color: var(--ink); font-family: Lato, Inter
   .academic-layout, .academic-layout > *, .content-column, .content-column > *, .content-card, .entries, .work-cards, .work-card, .work-card__content { min-width: 0; max-width: 100%; }
   .profile-column { position: static; }
   .profile-card { display: grid; grid-template-columns: 5.7rem 1fr; gap: .35rem 1rem; text-align: left; align-items: center; }
+  .current-updates-card { margin-top: .75rem; }
   .profile-photo { grid-row: span 4; width: 5.7rem; margin: 0; }
   .profile-card h1 { align-self: end; }
   .profile-title, .profile-location { margin: 0; }

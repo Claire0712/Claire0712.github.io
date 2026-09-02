@@ -18,6 +18,14 @@ export const profile = {
   location: { zh: '中国香港', en: 'Hong Kong SAR' }
 };
 
+export const currentUpdates = [
+  {
+    title: { zh: 'Nature Communications', en: 'Nature Communications' },
+    status: { zh: '进行中', en: 'In progress' },
+    detail: { zh: '共同作者 · 北京大学深圳研究支持 · 预计 9 月投稿', en: 'Co-author · Supported by Peking University Shenzhen · Target submission: September' }
+  }
+];
+
 export const research = [
   {
     period: 'Apr 2026 — Present',
