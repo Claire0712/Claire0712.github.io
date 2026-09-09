@@ -22,13 +22,13 @@ export const currentUpdates = [
   {
     title: { zh: 'Nature Communications', en: 'Nature Communications' },
     status: { zh: '进行中', en: 'In progress' },
-    detail: { zh: '共同作者 · 北京大学深圳研究支持 · 预计 9 月投稿', en: 'Co-author · Supported by Peking University Shenzhen · Target submission: September' }
+    detail: { zh: '共同作者 · 北京大学深圳研究支持', en: 'Co-author · Supported by Peking University Shenzhen' }
   }
 ];
 
 export const research = [
   {
-    period: 'Apr 2026 — Present',
+    period: 'Apr 2026 — SEP 2026',
     researchLayout: true,
     title: { zh: '学生研究助理', en: 'Student Research Assistant' },
     organization: { zh: '北京大学城市规划与设计学院智慧城市实验室 · 深圳，中国', en: 'Smart Cities Lab, School of Urban Planning and Design, Peking University · Shenzhen, China' },

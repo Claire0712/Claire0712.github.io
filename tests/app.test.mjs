@@ -43,12 +43,12 @@ test('right sidebar current-updates card keeps only the Nature Communications co
   assert.match(english, /Co-author/);
   assert.doesNotMatch(english, /Co-first author/);
   assert.match(english, /Supported by Peking University Shenzhen/);
-  assert.match(english, /Target submission: September/);
+  assert.doesNotMatch(english, /Target submission/);
   assert.match(chinese, /共同作者/);
   assert.match(chinese, /北京大学深圳研究支持/);
   assert.doesNotMatch(`${english}\n${chinese}`, /COLING 2027|WWW 2027/);
   assert.match(chinese, /Nature Communications/);
-  assert.match(chinese, /预计 9 月投稿/);
+  assert.doesNotMatch(chinese, /预计 9 月投稿/);
 });
 
 test('about section renders a dedicated keyword container instead of the intro paragraph', async () => {
