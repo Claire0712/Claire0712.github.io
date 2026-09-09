@@ -1,4 +1,4 @@
-import { academicWorks, awards, currentUpdates, education, profile, projects, research } from './data.js';
+import { academicWorks, awards, currentUpdates, education, profile, projects, research } from './data.js?v=20260909-1';
 
 export const normalizeLocale = (value) => value?.startsWith('en') ? 'en' : 'zh';
 
