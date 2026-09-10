@@ -105,16 +105,16 @@ test('research timeline renders aligned role-logo headings and concise bullet de
   assert.doesNotMatch(html, /entry__logo--dark/);
 });
 
-test('PKU and SFT research cards link localized supervisor names to their Scholar profiles', () => {
+test('PKU and SFT research cards link localized supervisor names to their requested profiles', () => {
   const expected = [
-    { zh: '张浩然', en: 'Haoran Zhang', id: 'gTKerhsAAAAJ' },
-    { zh: '丁玉娟', en: 'Yujuan Ding', id: '7cLi1BoAAAAJ' }
+    { zh: '张浩然', en: 'Haoran Zhang', url: 'https://scholar.google.com/citations?user=gTKerhsAAAAJ' },
+    { zh: '丁玉娟', en: 'Yujuan Ding', url: 'https://joanding.github.io/' }
   ];
   for (const locale of ['zh', 'en']) {
     for (const [index, supervisor] of expected.entries()) {
       const html = timelineMarkup([research[index]], locale);
       assert.ok(html.includes(locale === 'zh' ? '导师：' : 'Supervisor:'));
-      assert.ok(html.includes(`href="https://scholar.google.com/citations?user=${supervisor.id}"`));
+      assert.ok(html.includes(`href="${supervisor.url}"`));
       assert.ok(html.includes(`>${supervisor[locale]}</a>`));
       assert.match(html, /target="_blank" rel="noreferrer"/);
     }

@@ -1,4 +1,4 @@
-import { academicWorks, awards, currentUpdates, education, profile, projects, research } from './data.js?v=20260910-1';
+import { academicWorks, awards, currentUpdates, education, profile, projects, research } from './data.js?v=20260910-2';
 
 export const normalizeLocale = (value) => value?.startsWith('en') ? 'en' : 'zh';
 
@@ -54,8 +54,8 @@ export const timelineMarkup = (records, locale) => records.map((item) => {
   if (isCard) {
     const cardTitle = textFor(item.school || item.title, locale);
     const cardMeta = textFor(item.cardMeta || item.organization, locale);
-    const supervisor = item.supervisor?.scholar?.startsWith('https://')
-      ? `<p class="entry__card-meta entry__supervisor">${normalizeLocale(locale) === 'zh' ? '导师：' : 'Supervisor: '}<a href="${escapeHtml(item.supervisor.scholar)}" target="_blank" rel="noreferrer">${escapeHtml(textFor(item.supervisor.name, locale))}</a></p>`
+    const supervisor = item.supervisor?.url?.startsWith('https://')
+      ? `<p class="entry__card-meta entry__supervisor">${normalizeLocale(locale) === 'zh' ? '导师：' : 'Supervisor: '}<a href="${escapeHtml(item.supervisor.url)}" target="_blank" rel="noreferrer">${escapeHtml(textFor(item.supervisor.name, locale))}</a></p>`
       : '';
     const cardBullets = item.cardBullets || [item.summary];
     const cardBulletItems = cardBullets.map((bullet) => `<li>${escapeHtml(textFor(bullet, locale))}</li>`).join('');

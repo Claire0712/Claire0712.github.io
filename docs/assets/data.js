@@ -32,7 +32,7 @@ export const research = [
     researchLayout: true,
     title: { zh: '学生研究助理', en: 'Student Research Assistant' },
     organization: { zh: '北京大学城市规划与设计学院智慧城市实验室 · 深圳，中国', en: 'Smart Cities Lab, School of Urban Planning and Design, Peking University · Shenzhen, China' },
-    supervisor: { name: { zh: '张浩然', en: 'Haoran Zhang' }, scholar: 'https://scholar.google.com/citations?user=gTKerhsAAAAJ' },
+    supervisor: { name: { zh: '张浩然', en: 'Haoran Zhang' }, url: 'https://scholar.google.com/citations?user=gTKerhsAAAAJ' },
     summary: { zh: '开展电网韧性与能源—气候相互作用的数据驱动分析和建模。', en: 'Conduct data-driven analysis and modeling on power-grid resilience and energy-climate interactions for sustainable energy systems.' },
     logo: { src: './assets/media/pku-smart-cities-lab-logo.png', invert: true }
   },
@@ -41,7 +41,7 @@ export const research = [
     researchLayout: true,
     title: { zh: '学生研究助理', en: 'Student Research Assistant' },
     organization: { zh: '香港理工大学纺织与服装学院 · 中国香港', en: 'School of Fashion and Textiles, The Hong Kong Polytechnic University · Hong Kong SAR' },
-    supervisor: { name: { zh: '丁玉娟', en: 'Yujuan Ding' }, scholar: 'https://scholar.google.com/citations?user=7cLi1BoAAAAJ' },
+    supervisor: { name: { zh: '丁玉娟', en: 'Yujuan Ding' }, url: 'https://joanding.github.io/' },
     summary: { zh: '构建纺织与服装问答 RAG 原型，并支持知识图谱整理、实体识别与检索评估。', en: 'Build a RAG prototype for fashion and textiles QA; support knowledge-graph curation, named entity recognition, and retrieval evaluation.' },
     cardBullets: [
       { zh: '构建面向纺织与服装问答的领域专用检索增强生成（RAG）原型，通过精选文档和结构化知识为大语言模型输出提供依据。', en: 'Built a domain-specific Retrieval-Augmented Generation (RAG) prototype for fashion/textiles QA by grounding LLM outputs on curated documents and structured knowledge.' },
