@@ -214,6 +214,8 @@ body { background: var(--page-tint); color: var(--ink); font-family: Lato, Inter
 #education .entry--card h3 { font-size: 1.25rem; }
 #projects .entry--card h3 { font-size: 1.08rem; }
 .entry__card-meta { margin: 0 0 .85rem; color: var(--muted); font-size: 1rem; }
+.entry__supervisor a { color: var(--deep-violet); text-decoration: underline; text-underline-offset: .15em; }
+.entry__supervisor a:hover, .entry__supervisor a:focus-visible { color: var(--teal); }
 .entry__card-bullets { margin: 0; padding-left: 1.2rem; color: #596171; }
 .entry__card-bullets li + li { margin-top: .25rem; }
 
