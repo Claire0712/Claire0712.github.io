@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const output = resolve(root, 'docs');
-const directories = ['assets', 'MMM2027', 'PKUcourse'];
+const directories = ['assets', 'MMM2027', 'PKUcourse', 'LSGI2802_Assignment1'];
 const files = ['index.html', 'LSGI2801.pdf', 'LSGI2801_Assignment.pdf'];
 
 await mkdir(output, { recursive: true });

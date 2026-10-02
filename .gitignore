@@ -12,6 +12,8 @@ docs/*
 !docs/MMM2027/**
 !docs/PKUcourse/
 !docs/PKUcourse/**
+!docs/LSGI2802_Assignment1/
+!docs/LSGI2802_Assignment1/**
 !docs/LSGI2801.pdf
 !docs/LSGI2801_Assignment.pdf
 docs/**/.DS_Store

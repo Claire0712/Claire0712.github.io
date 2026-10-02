@@ -106,6 +106,18 @@ export const academicWorks = [
   },
   {
     category: 'coursePaper',
+    title: { zh: '香港用电量热敏感性的部门差异', en: 'Sectoral differences in the heat sensitivity of electricity consumption in Hong Kong' },
+    note: { zh: 'LSGI2802 · 课程作业 1', en: 'LSGI2802 · Assignment 1' },
+    noteLogo: './assets/media/polyu-logo.svg',
+    authors: [{ name: 'Zhang, Shizhuo' }],
+    abstract: { zh: '结合香港天文台每日气温与政府统计处月度用电数据，分析 2010—2025 年香港不同部门的高温与用电关联。研究使用 192 个月的观测，在控制月份和年份固定效应后比较部门差异，并以 28 个气象站的温度相关网络呈现空间背景。以 24°C 为基准的冷却度日每增加 10 个度日，总用电量和住宅用电量分别关联增加 1.84% 和 3.50%。住宅部门的关联更强；研究结论为统计关联，反馈、适应与用户互动机制仍需进一步检验。', en: 'Using Hong Kong Observatory daily temperatures and Census and Statistics Department monthly electricity data for 2010–2025, this assignment examines sectoral differences in the heat–electricity relationship. Regressions for 192 months control for calendar-month and year effects, while a correlation network of 28 weather stations describes spatial temperature patterns. Ten additional cooling degree-days above 24°C are associated with 1.84% higher total consumption and 3.50% higher residential consumption, with a stronger residential association. Results describe statistical associations; feedback, adaptation, and interactions among users remain mechanisms for further investigation.' },
+    preview: './assets/media/lsgi2802-figure1.png',
+    previews: ['./assets/media/lsgi2802-figure1.png', './assets/media/lsgi2802-figure2.png'],
+    pdf: './LSGI2802_Assignment1/assign1.pdf',
+    code: 'https://github.com/Claire0712/LSGI2802_Assignment1'
+  },
+  {
+    category: 'coursePaper',
     title: { zh: '香港与新加坡智慧城市路径比较：交通、能源与经济', en: 'A Comparative Analysis of Smart City Trajectories: Mobility, Energy, and Economy in Hong Kong and Singapore' },
     note: { zh: 'Course Paper', en: 'Course Paper' },
     abstract: { zh: '本研究从智慧交通、智慧能源与智慧经济三个维度比较香港与新加坡的智慧城市路径。结合时空可视化与普通最小二乘回归，研究讨论动态定价、交通拥堵、经济发展与电动车基础设施之间的关系，并提出兼顾政府主导公平、开放数据标准和市场驱动本地创新的混合治理框架。', en: 'This comparative study examines smart-city trajectories in Hong Kong and Singapore through smart mobility, energy, and economy. Combining spatiotemporal visualisation and OLS regression, it considers dynamic pricing, congestion, economic development, and EV infrastructure, and proposes a hybrid governance framework that combines public equity, open-data standards, and local market innovation.' },

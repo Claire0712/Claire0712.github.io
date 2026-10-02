@@ -72,7 +72,7 @@ test('resume data is populated from the CV instead of placeholder copy', () => {
   assert.equal(education.length, 1);
   assert.equal(research.length, 3);
   assert.equal(projects.length, 1);
-  assert.equal(academicWorks.length, 4);
+  assert.equal(academicWorks.length, 5);
   assert.equal(awards.length, 4);
   assert.doesNotMatch(JSON.stringify({ profile, research, projects, education, awards }), /你的姓名|Your Name|示例|example\.com/);
 });
@@ -161,10 +161,10 @@ test('education separates the minor line and its AMA logo from the BSc informati
 test('academic works render image cards with expandable abstracts and PDFs', () => {
   const html = academicWorksMarkup(academicWorks, 'en');
   const chineseHtml = academicWorksMarkup(academicWorks, 'zh');
-  assert.equal((html.match(/class="work-card"/g) || []).length, 4);
+  assert.equal((html.match(/class="work-card"/g) || []).length, 5);
   assert.match(html, /class="work-group__heading">Publications/);
   assert.match(html, /class="work-group__heading">Course Paper/);
-  assert.equal((html.match(/<details>/g) || []).length, 4);
+  assert.equal((html.match(/<details>/g) || []).length, 5);
   assert.match(html, /assets\/media\/mmm-figure\.png/);
   assert.match(html, /assets\/media\/mmm-qapcf\.png/);
   assert.match(html, /data-carousel/);
