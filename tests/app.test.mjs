@@ -72,7 +72,7 @@ test('resume data is populated from the CV instead of placeholder copy', () => {
   assert.equal(education.length, 1);
   assert.equal(research.length, 3);
   assert.equal(projects.length, 1);
-  assert.equal(academicWorks.length, 5);
+  assert.equal(academicWorks.length, 4);
   assert.equal(awards.length, 4);
   assert.doesNotMatch(JSON.stringify({ profile, research, projects, education, awards }), /你的姓名|Your Name|示例|example\.com/);
 });
@@ -161,19 +161,14 @@ test('education separates the minor line and its AMA logo from the BSc informati
 test('academic works render image cards with expandable abstracts and PDFs', () => {
   const html = academicWorksMarkup(academicWorks, 'en');
   const chineseHtml = academicWorksMarkup(academicWorks, 'zh');
-  assert.equal((html.match(/class="work-card"/g) || []).length, 5);
-  assert.match(html, /class="work-group__heading">Publications/);
+  assert.equal((html.match(/class="work-card"/g) || []).length, 4);
+  assert.doesNotMatch(html, /class="work-group__heading">Publications/);
   assert.match(html, /class="work-group__heading">Course Paper/);
-  assert.equal((html.match(/<details>/g) || []).length, 5);
-  assert.match(html, /assets\/media\/mmm-figure\.png/);
-  assert.match(html, /assets\/media\/mmm-qapcf\.png/);
+  assert.equal((html.match(/<details>/g) || []).length, 4);
   assert.match(html, /data-carousel/);
   assert.match(html, /data-carousel-next/);
-  assert.match(html, /MMM2027 Under Submission/);
   assert.match(html, /PKU Course Paper/);
-  assert.match(chineseHtml, /MMM2027 在投/);
   assert.match(chineseHtml, /高温与卫生系统能力：中国医患关系的可复现生态学研究/);
-  assert.match(html, /Zhang, Shizhuo<sup>\*<\/sup>; Liu, Wentao<sup>\*<\/sup>; Fang, Kun; Chen, Yutong/);
   assert.match(html, /work-card__note-logo/);
   assert.match(html, /pku-logo\.svg/);
   assert.doesNotMatch(html, /MMM2027\/MMM2027\.pdf/);
@@ -283,11 +278,11 @@ test('English is the default presentation language and GitHub caption', async ()
   assert.match(app, /savedLocale\(\) \|\| 'en'/);
 });
 
-test('academic work keeps submission and course-work status in separate labels', () => {
-  assert.doesNotMatch(academicWorks[0].title.en, /Under submission/);
-  assert.doesNotMatch(academicWorks[1].title.en, /Peking University course work/);
-  assert.deepEqual(academicWorks[0].note, { zh: 'MMM2027 在投', en: 'MMM2027 Under Submission' });
-  assert.deepEqual(academicWorks[1].note, { zh: '北大课程论文', en: 'PKU Course Paper' });
+test('academic works retain course papers after removing ThermalCareBench', () => {
+  assert.equal(academicWorks.length, 4);
+  assert.ok(academicWorks.every((work) => work.category === 'coursePaper'));
+  assert.doesNotMatch(JSON.stringify(academicWorks), /ThermalCareBench|MMM2027|mmm-figure|mmm-qapcf/);
+  assert.deepEqual(academicWorks[0].note, { zh: '北大课程论文', en: 'PKU Course Paper' });
 });
 
 test('page source no longer contains the removed hero-action labels', async () => {

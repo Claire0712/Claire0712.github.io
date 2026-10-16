@@ -81,20 +81,6 @@ export const projects = [
 
 export const academicWorks = [
   {
-    category: 'publication',
-    title: { zh: 'ThermalCareBench：热偏好支持的可审计多模态智能体评测', en: 'ThermalCareBench: Auditable Multimodal Agent Evaluation for Thermal-Preference Support' },
-    note: { zh: 'MMM2027 在投', en: 'MMM2027 Under Submission' },
-    authors: [
-      { name: 'Zhang, Shizhuo', equalContribution: true },
-      { name: 'Liu, Wentao', equalContribution: true },
-      { name: 'Fang, Kun' },
-      { name: 'Chen, Yutong' }
-    ],
-    abstract: { zh: '提出一个用于热偏好支持的多模态智能体评测基准。该基准基于 14 名参与者的 3,843 条可穿戴设备、环境、行为与历史观测，设置部分可观测的工具调用环境，并从偏好一致性、证据充分性、行动安全性、工具预算和范围约束等维度进行评估。', en: 'This work introduces an auditable benchmark for thermal-preference support from wearable, environmental, behavioural, and historical evidence. Using 3,843 observations from 14 adults, it evaluates partially observed, tool-mediated trajectories for preference agreement, evidence sufficiency, action safety, tool budget, and scope control.' },
-    preview: './assets/media/mmm-figure.png',
-    previews: ['./assets/media/mmm-figure.png', './assets/media/mmm-qapcf.png']
-  },
-  {
     category: 'coursePaper',
     title: { zh: '高温与卫生系统能力：中国医患关系的可复现生态学研究', en: 'When Heat Meets Health-System Capacity: A Reproducible Ecological Study of Outpatient Utilization Across China' },
     note: { zh: '北大课程论文', en: 'PKU Course Paper' },
